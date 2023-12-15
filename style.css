@@ -1,0 +1,258 @@
+@font-face {
+    font-family: 'nb';
+    src: url(./components/NBInternationalProBoo.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: nb;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#page1 {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+
+}
+
+#page1 video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+#cursor {
+    height: 7vw;
+    width: 7vw;
+    background-color: #ff5f38;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transform: translate(-50%, -50%);
+}
+
+#cursor h5 {
+    font-size: 1.17vw;
+    font-weight: 500;
+}
+
+#page1-content {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    color: white;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+nav {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw 3vw;
+    align-items: center;
+}
+
+nav h3 {
+    font-size: 1.4vw;
+    font-weight: 100;
+}
+
+nav h4 {
+    font-size: 1.4vw;
+    font-weight: 100;
+}
+
+#page1-content h1 {
+    font-family: 'rejouice headline';
+    font-weight: 100;
+    line-height: 26vw;
+}
+
+#page1-content h1 span {
+    font-size: 26vw;
+    font-family: 'rejouice headline';
+
+}
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(255, 244, 232);
+    padding: 5.3vw 2.8vw;
+}
+
+#page2 #upperpage2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding-bottom: 1.2vw;
+}
+
+#page2 #upperpage2 #firstchildh2 {
+    width: 26%;
+    letter-spacing: 1;
+    font-size: 1.7vw;
+    font-weight: 100;
+}
+
+#page2 #upperpage2 #lastchildh2 {
+    width: 15%;
+    letter-spacing: 1;
+    font-size: 1.7vw;
+    font-weight: 100;
+}
+
+#page2 #line {
+    width: 99%;
+    padding-bottom: 2vw;
+    border-top: 2px solid rgb(189, 189, 189);
+}
+
+#page2 #lowerpage2 h1 {
+    font-size: 4.1vw;
+    font-weight: 100;
+    line-height: 0.8;
+}
+
+#page2 #lowerpage2 h1 span {
+    margin-right: 7.8vw;
+    background-color: red;
+
+}
+
+#page3 {
+    min-height: 100vh;
+    width: 100%;
+    padding: 3vw;
+    padding-bottom: 1vw;
+    position: relative;
+    
+}
+
+#page3-top {
+    text-align: center;
+}
+
+#page3-top h4 {
+    margin-bottom: 1vw;
+    font-size: 1vw;
+    font-weight: 500;
+}
+
+#page3-top h4 i {
+    font-size: 1.2vw;
+}
+
+#page3-top h4 span {
+    font-size: 0.65vw;
+    margin-left: 5px;
+    background-color: black;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 10px;
+}
+
+#page3-top h2 {
+    font-size: 4.3vw;
+    font-weight: 500;
+}
+
+#page3-elements {
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    margin-top: 1.2vw;
+    justify-content: space-between;
+}
+
+#page3-elements .box {
+    position: relative;
+    height: 100%;
+    width: 32.5%;
+    
+}
+
+#page3-elements .box video {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-position: center;
+}
+
+#page3-elements .box img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    opacity: 1;
+    transition: all linear 0.7s;
+}
+
+#page3-elements .box:hover img {
+    opacity: 0;
+
+}
+#page3 #cars{
+    margin-top: 14vw;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+}
+#page3 #cars h2{
+    font-size: 2vw;
+    font-weight: 200;
+}
+#page3 #cars h2 i{
+    margin-right: 5px;
+}
+
+#page3 #lastpage3{
+    margin-top: 10vw;
+width:100%;
+padding-bottom: 1vw;
+border-bottom: 1px solid grey;
+}
+#page3 #lastpage3 h2{
+    font-size: 1.8vw;
+    font-weight: 200;
+    
+}
+
+#page4{
+    padding:0 3vw;
+    min-height: 100vh;
+    width: 100%;
+}
+#page4 #page4-top{
+    width:100%;
+
+}
+#page4 #page4-top h1 span{
+
+    padding-right: 10vw;
+}
+#page4 #page4-top h1{
+    font-size: 4.2vw;
+    font-weight: 200;
+}
