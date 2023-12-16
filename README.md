@@ -1,2 +1,4 @@
 # rejouiceCloneHomeAnimation
-update(completed till 3boxes of div {videos})
+update(completed till 4pages})
+## link :
+https://amanbhardwaj-git.github.io/rejouiceCloneHomeAnimation/
