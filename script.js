@@ -54,6 +54,37 @@ function cursorEffect() {
 }
 cursorEffect();
 
+
+function cursorEffect4() {
+let rect = document.querySelector('#page4-elem')
+    let cursor1 = document.querySelector("#page4-elem #cursor1")
+
+    rect.addEventListener('mousemove', function (dets) {
+    let rectLocation = rect.getBoundingClientRect();
+    let cursorLocation = cursor1.getBoundingClientRect();
+        gsap.to(cursor1, {
+            x: Math.ceil(dets.clientX-(rectLocation.width+cursorLocation.width )/2)+ 'px',
+            y: Math.ceil(dets.clientY-(rectLocation.height-+cursorLocation.height)/2) + 'px',
+          
+        })
+
+    })
+    document.querySelector('#page4-elem-video').addEventListener('mouseenter', function () {
+        gsap.to(cursor1, {
+            scale: 1,
+            opacity: 1,
+        })
+    })
+    document.querySelector('#page4-elem-video').addEventListener('mouseleave', function () {
+        gsap.to(cursor1, {
+            scale: 0,
+            opacity: 0,
+
+        })
+    })
+}
+cursorEffect4();
+
 function page2Animation() {
     gsap.from('#page2 #lowerpage2 h1 ,#upperpage2 h2,#page2 #line', {
         y: 120,
@@ -72,7 +103,7 @@ page2Animation();
 
 
 function page4Animation() {
-    gsap.from('#page4 #page4-top h1', {
+    gsap.from('#page4 #page4-top h1, #page4 #page4-h2', {
         y: 120,
         stagger: 0.2,
         duration: 1,
@@ -86,3 +117,4 @@ function page4Animation() {
     })
 }
 page4Animation();
+
