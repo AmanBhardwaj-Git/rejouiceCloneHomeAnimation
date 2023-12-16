@@ -1,4 +1,4 @@
 # rejouiceCloneHomeAnimation
-update(completed till 4pages})
+update(completed till infinite vaertical scroll animation})
 ## link :
 https://amanbhardwaj-git.github.io/rejouiceCloneHomeAnimation/
