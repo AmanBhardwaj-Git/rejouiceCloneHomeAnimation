@@ -87,6 +87,7 @@ nav h4 {
 }
 
 #page1-content h1 span {
+    display: inline-block;
     font-size: 26vw;
     font-family: 'rejouice headline';
 
@@ -342,3 +343,69 @@ border-bottom: 1px solid grey;
     font-weight: 100;
 color:white;
 }
+#page5{
+    height: 100vh;
+    width:100%;
+    padding :4vw 0;
+}
+#page5 #page5-top h1{
+    font-size: 10vw;
+    font-family: 'rejouice headline';
+    font-weight: 100;
+    border-bottom: 1px solid grey;
+    width:96%;
+    margin-left: 2%;
+}
+#page5 #swiperdiv{
+    height: 60vh;
+    width:100%;
+    position: relative;
+}
+
+
+
+.swiper {
+    width: 90%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    cursor:grabbing
+    
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height:fit-content;
+    object-fit:contain;
+  }
+
+  .swiper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #loader{
+    height: 100%;
+    width:100%;
+    position: fixed;
+    top:0;
+    background-color: rgb(10, 9, 9);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color:antiquewhite;
+    font-family: 'rejouice headline';
+    font-weight: 100;
+    font-size: 2.5vw;
+  }
+  #loader span {
+    font-size: 1.3vw;
+  }
