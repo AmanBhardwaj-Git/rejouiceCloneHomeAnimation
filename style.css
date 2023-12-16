@@ -227,22 +227,25 @@ nav h4 {
     margin-right: 5px;
 }
 
-#page3 #lastpage3{
+#page4 #page4-h2{
     margin-top: 10vw;
 width:100%;
 padding-bottom: 1vw;
+
 border-bottom: 1px solid grey;
 }
-#page3 #lastpage3 h2{
+#page4 #page4-h2 h2{
     font-size: 1.8vw;
     font-weight: 200;
-    
+    width:60%;
 }
 
 #page4{
     padding:0 3vw;
     min-height: 100vh;
     width: 100%;
+ 
+    position:relative;
 }
 #page4 #page4-top{
     width:100%;
@@ -255,4 +258,87 @@ border-bottom: 1px solid grey;
 #page4 #page4-top h1{
     font-size: 4.2vw;
     font-weight: 200;
+}
+#page4 #page4-elem{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+#page4 #page4-elem-video{
+    width:fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+}
+#page4 #page4-elem-video video{
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+}
+#page4 #page4-elem #cursor1{
+    background-color: black;
+    color:white;
+    height: 5vw;
+    width: 5vw;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transform: translate(-50%, -50%);
+}
+
+#cursor1 h5 {
+    font-size: 1.17vw;
+    font-weight: 500;
+}
+#page4 #page4-elem #svg{
+    position: absolute;
+    height:60%;
+    border:2px solid rgb(255, 255, 255);
+    width:60%;
+    border-radius: 50%;
+    z-index: 5;
+}
+#svg #svgcircle{
+    height:1.5vw;
+    border-radius: 50%;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width:1.5vw;
+    position: absolute;
+    z-index: 6;
+    top:38%;
+    left:1%;
+    transform: translate(-50%, -50%);
+    
+
+}
+
+#page4 #h2elem{
+    height: 100%;
+    width:100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+
+}
+#page4 #h2elem h1{
+    font-size: 2vw;
+    font-weight: 200;
+    color:white;
+}
+#page4 #h2elem h3{
+    margin-top: -1vw;
+    font-size: 1.2vw;
+    font-weight: 100;
+color:white;
 }
