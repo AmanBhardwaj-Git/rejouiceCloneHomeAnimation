@@ -118,3 +118,45 @@ function page4Animation() {
 }
 page4Animation();
 
+function swipperanimation(){
+
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+    loop: true,
+    autoplay:{
+        delay:2500,
+        // ease:Expo.easeInOut,
+        disableOnInteraction:true,
+
+    },
+  });
+}
+swipperanimation();
+
+
+let tl = gsap.timeline()
+tl.from('#loader h1',{
+    x:110,
+    opacity:0.5,
+stagger:0.1,
+    duration:1,
+})
+tl.to('#loader h1',{
+    opacity:0,
+    x:-60,
+    stagger:0.1,
+    duration:0.5,
+})
+tl.to('#loader',{
+    opacity:0,
+})
+tl.to('#loader',{
+   display:'none',
+})
+tl.from('#page1-content h1 span',{
+    y:100,
+    opacity:0,
+    stagger:0.1,
+    delay:-0.5,
+    duration:0.5,
+})
