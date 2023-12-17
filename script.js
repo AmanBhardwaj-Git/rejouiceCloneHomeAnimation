@@ -133,6 +133,42 @@ function swipperanimation(){
 }
 swipperanimation();
 
+function lastpageAnimation(){  
+    let page = document.querySelector("#page6-content-lower-down ")
+
+page.addEventListener('mouseover',function(){
+   gsap.to('#page6-content-lower-down h1',{
+    y:-120,
+    duration:1,
+    opacity:0
+   })
+})
+
+page.addEventListener('mouseleave',function(){
+    gsap.to('#page6-content-lower-down h1',{
+     y:0,
+     duration:1,
+     opacity:1
+    })
+})
+page.addEventListener('mouseover',function(){
+   gsap.to('#page6-content-lower-down h2',{
+    y:-100,
+    duration:1,
+    opacity:1
+})
+})
+
+page.addEventListener('mouseleave',function(){
+    gsap.to('#page6-content-lower-down h2',{
+        y:20,
+        duration:1,
+        opacity:0
+    })
+})
+
+}
+lastpageAnimation();
 
 let tl = gsap.timeline()
 tl.from('#loader h1',{
