@@ -279,7 +279,7 @@ nav h4 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 90vh;
 }
 
 #page4 #page4-elem-video {
@@ -300,47 +300,84 @@ nav h4 {
 #page4 #page4-elem #cursor1 {
     background-color: black;
     color: white;
-    height: 5vw;
-    width: 5vw;
+    height: 8vh;
+    width: 8vh;
     border-radius: 50%;
     position: absolute;
-    z-index: 9;
+    z-index: 9999;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    transform: translate(-50%, -50%);
+    transform: translate(0%, 0%);
 }
 
 #cursor1 h5 {
-    font-size: 1.17vw;
+    font-size: 1.17vh;
     font-weight: 500;
 }
 
 #page4 #page4-elem #svg {
     position: absolute;
-    height: 60%;
-    border: 2px solid rgb(255, 255, 255);
-    width: 60%;
+    height: 50vh;
+    border: 1px solid rgb(133, 132, 132);
+    width: 50vh;
     border-radius: 50%;
     z-index: 5;
 }
 
-#svg #svgcircle {
-    height: 1.5vw;
+#page4 #page4-elem #svg::before {
+    content: '';
+    position: absolute;
+    top:-3px;
+    left:-3px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
     border-radius: 50%;
-    position: absolute;
-    background-color: rgb(255, 255, 255);
-    width: 1.5vw;
-    position: absolute;
-    z-index: 6;
-    top: 38%;
-    left: 1%;
-    transform: translate(-50%, -50%);
-
-
+    animation: animateCircle 3s linear infinite;
+    
 }
-
+ #svg #span1{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    width:50%;
+    height: 4px;
+    background-color: transparent;
+    transform-origin: left ;
+    animation: animate 3s linear infinite;
+}
+#span1:before{
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    top: -6px;
+    right:-8px;
+    box-shadow: 0 0 20px #fff000;
+}
+@keyframes animateCircle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes animate {
+    0% {
+        transform: rotate(45deg);
+    }
+    100%{
+        transform: rotate(405deg);
+    }
+}
 #page4 #h2elem {
     height: 100%;
     width: 100%;
