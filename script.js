@@ -56,26 +56,25 @@ cursorEffect();
 
 
 function cursorEffect4() {
-let rect = document.querySelector('#page4-elem')
-    let cursor1 = document.querySelector("#page4-elem #cursor1")
-
-    rect.addEventListener('mousemove', function (dets) {
-    let rectLocation = rect.getBoundingClientRect();
-    let cursorLocation = cursor1.getBoundingClientRect();
-        gsap.to(cursor1, {
-            x: Math.ceil(dets.clientX-(rectLocation.width+cursorLocation.width )/2)+ 'px',
-            y: Math.ceil(dets.clientY-(rectLocation.height-+cursorLocation.height)/2) + 'px',
-          
-        })
+        let rect = document.querySelector('#svg')
+        let cursor1 = document.querySelector("#page4-elem #cursor1")
+    
+        document.querySelector("#page4-elem").addEventListener('mousemove', function (dets) {
+        let rectLocation = rect.getBoundingClientRect();
+        let cursorLocation = cursor1.getBoundingClientRect();
+            gsap.to(cursor1, {
+                x: dets.clientX - rectLocation.width - cursorLocation.width*5 + 'px',
+                y:dets.clientY - rectLocation.height - cursorLocation.height*2  + 'px',
+            })
 
     })
-    document.querySelector('#page4-elem-video').addEventListener('mouseenter', function () {
+    document.querySelector('#svg').addEventListener('mouseenter', function () {
         gsap.to(cursor1, {
             scale: 1,
             opacity: 1,
         })
     })
-    document.querySelector('#page4-elem-video').addEventListener('mouseleave', function () {
+    document.querySelector('#svg').addEventListener('mouseleave', function () {
         gsap.to(cursor1, {
             scale: 0,
             opacity: 0,
@@ -179,7 +178,7 @@ stagger:0.1,
 })
 tl.to('#loader h1',{
     opacity:0,
-    x:-60,
+    x: -60,
     stagger:0.1,
     duration:0.5,
 })
@@ -196,3 +195,25 @@ tl.from('#page1-content h1 span',{
     delay:-0.5,
     duration:0.5,
 })
+
+
+let speed = 100;
+function incEltNbr(id) {
+  elt = document.getElementById(id);
+  endNbr = Number(document.getElementById(id).innerHTML);
+  incNbrRec(endNbr, 1, elt);
+}
+function incNbrRec(i, endNbr, elt) {
+  if (i >= endNbr) {
+    elt.innerHTML = i;
+    setTimeout(function () {
+      incNbrRec(i - 1, endNbr, elt);
+    }, speed);
+  }
+}
+document
+  .querySelector("#svg")
+  .addEventListener("mouseover", function () {
+    incEltNbr("nbr");
+  });
+
